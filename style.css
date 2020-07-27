@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    max-width: 1300px;
+    margin: auto;
+    background-image: url("gym.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Baloo Bhai 2', Arial, Helvetica, cursive, sans-serif;
+}
+
+.nav-content {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 90px;
+    height: auto;
+    filter: invert(70%);
+}
+
+.logo a {
+    display: block;
+    color: rgb(143, 143, 143);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    line-height: 20px;
+}
+
+.navigation-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 5px;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-shadow: 0 0 4px rgb(56, 57, 126), 0 0 4px rgb(56, 57, 126);
+    /* border: 1px solid red; */
+}
+
+.navigation-links a:hover {
+    border-bottom: 3px solid rgb(56, 57, 126);
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown {
+    display: none;
+}
+
+.header-b {
+    border: 3px solid rgb(56, 57, 126);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: rgb(56, 57, 126);
+    color: white;
+    width: 100px;
+    height: 40px;
+    transition-duration: 400ms;
+    font-weight: 600;
+    box-shadow: 0 0 5px black;
+}
+
+.header-b:hover {
+    color: rgb(56, 57, 126);
+    border: 3px solid white;
+    background-color: white;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
+.header-b:active {
+    transform: scale(0.80);
+}
+
+.header-b:focus {
+    outline: none;
+}
+
+form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.form-content {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 340px;
+    height: 510px;
+    box-shadow: 0 0 5px black;
+}
+
+.form-content input {
+    padding: 5px 10px;
+    font-size: 1.22rem;
+    /* color: green; */
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid black;
+}
+
+.form-content input:focus {
+    outline: 3px solid rgb(56, 57, 126);
+}
+
+.form-content p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px 0px;
+    text-shadow: 0 0 4px rgb(56, 57, 126), 0 0 4px rgb(56, 57, 126);
+}
+
+#submit {
+    display: block;
+    margin: 30px auto;
+}
+
+@media (max-width: 970px) {
+    body {
+        background-image: url(gym1.jpg);
+    }
+
+    .form-content {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 855px) {
+    body {
+        background-image: url("https://source.unsplash.com/900x700/?gym,fitness");
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("https://source.unsplash.com/600x900/?gym,fitness");
+    }
+
+    .nav-content {
+        display: block;
+    }
+
+    .logo {
+        display: block;
+        float: left;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
+    .dropdown {
+        margin-top: 30px;
+        display: block;
+        float: right;
+    }
+
+    .header-button {
+        margin-top: 30px;
+        clear: both;
+        display: block;
+        float: right;
+    }
+
+    form {
+        justify-content: flex-start;
+    }
+
+    .form-content input {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        background-image: url("https://source.unsplash.com/400x600/?gym,fitness");
+    }
+}
