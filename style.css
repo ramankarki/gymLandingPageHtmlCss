@@ -35,6 +35,11 @@ body {
     line-height: 20px;
 }
 
+.logo a:hover {
+    color: rgb(143, 143, 143);
+    text-decoration: none;
+}
+
 .navigation-links a {
     color: white;
     text-decoration: none;
