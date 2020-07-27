@@ -56,6 +56,17 @@ body {
     display: none;
 }
 
+.btn{
+    background-color: rgb(56, 57, 126) !important;
+    border-color: rgb(56, 57, 126) !important;
+    outline: none !important;
+    font-weight: bolder !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(56, 57, 126, 0.233) !important;
+}
+
 .header-b {
     border: 3px solid rgb(56, 57, 126);
     border-radius: 5px;
