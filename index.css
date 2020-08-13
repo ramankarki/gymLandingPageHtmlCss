@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* variables declaration  */
+:root {
+    --body-background-color: rgb(246, 255, 232);
+    --header-height: 60px;
+    --heading-font-size: 1.8rem;
+    --dark-green: rgb(22, 73, 22);
+    --light-green: rgb(230, 255, 230);
+    --nav-hover-color: rgba(17, 95, 17, 0.363);
+}
+
+/* max width of body is 1920px */
+body {
+    max-width: 1920px;
+    margin: auto;
+    background-color: var(--body-background-color);
+}
+
+header {
+    background-color: var(--light-green);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.header-container {
+    padding: .5rem 0;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-section p {
+    font-size: var(--heading-font-size);
+    color: var(--dark-green);
+    margin-left: .5rem;
+}
+
+.logo-section img {
+    height: 100%;
+    width: auto;
+}
+
+a:active,
+a:focus,
+a:visited {
+    color: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-green);
+    border-bottom: 4px solid var(--light-green);
+    padding: 1.6rem 1rem;
+    margin: 0 .8rem;
+}
+
+nav a:hover {
+    color: var(--nav-hover-color);
+}
+
+nav a:nth-child(5),
+nav a:nth-child(6) {
+    font-weight: bold;
+}
+
+nav a:nth-child(5) {
+    margin-right: 0rem;
+    text-decoration: underline;
+}
+
+.green-button {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-green);
+    color: white;
+    padding: 1rem 2rem;
+    border: 2px solid var(--dark-green);
+    border-radius: 5rem;
+    transition-duration: 400ms;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.green-button:hover {
+    color: var(--dark-green);
+    background-color: white;
+    transition-duration: 400ms;
+}
+
+.dropdown-container {
+    display: none;
+}
+
+.gym-main-section {
+    height: 100vh;
+    background-image: url("image/gym.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gym-jumptron {
+    height: 100vh;
+    background-image: linear-gradient(90deg, white 5%, rgba(255, 255, 255, 0) 100%);
+    padding: 6.5rem;
+}
+
+.gym-mainline {
+    font-size: 3rem;
+    color: var(--dark-green);
+}
+
+.gym-desc {
+    color: rgb(107, 107, 107);
+    margin: 3rem 0;
+}
+
+.community-heading {
+    text-align: center;
+    font-size: var(--heading-font-size);
+    color: var(--dark-green);
+    font-weight: bold;
+    margin: 5rem 0 1rem 0;
+}
+
+.community-heading + hr {
+    opacity: 0.2;
+    margin-bottom: 2rem;
+}
+
+/* testing  */
+.community-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    :root {
+        --heading-font-size: 1.4rem;
+    }
+
+    .green-button {
+        padding: 0.8rem 1.8rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* dropdown section  */
+    .dropdown-container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .dropdown-container:active,
+    .dropdown-container:focus {
+        outline: none;
+        color: none;
+        background: none;
+    }
+
+    .dropdown-items {
+        display: none;
+        right: 0;
+        position: absolute;
+        background-color: var(--light-green);
+        padding: .7rem 1.2rem;
+    }
+    
+    .dropdown-item {
+        display: block;
+        text-decoration: none;
+        background-color: rgb(193, 255, 206);
+        padding: .6rem 1.5rem;
+        margin: .5rem 0;
+        color: var(--dark-green);
+        border-radius: .5rem;
+    }
+    
+    .dropdown-item:hover,
+    .dropdown-item:active {
+        background-color: rgb(143, 255, 167);
+    }
+    
+    .dropdown-container:hover .dropdown-button {
+        color: var(--dark-green);
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    .dropdown-container:hover .dropdown-items {
+        display: block;
+    }
+
+
+}
+
+
+
+@media (max-width: 700px) {
+    .gym-jumptron {
+        padding: 3.5rem;
+        background-color: rgba(255, 255, 255, 0.527);
+    }
+
+    .gym-jumptron p:nth-child(1) {
+        margin-top: 5rem;
+    }
+
+    .gym-mainline {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+@media (max-width: 400px) {
+    .gym-jumptron {
+        padding: 2rem;
+    }
+
+    .gym-mainline {
+        font-size: 1.8rem;
+    }
+}
+
+
