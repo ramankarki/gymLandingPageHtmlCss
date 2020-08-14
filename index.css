@@ -145,18 +145,20 @@ nav a:nth-child(5) {
     margin-bottom: 2rem;
 }
 
+.community-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.gallery-item {
+    flex: 400px;
+    margin: 1px 3px;
+}
 
-
-/* testing  */
-.community-gallery img {
+.gallery-item img {
     width: 100%;
     height: auto;
 }
-
-
-
-
 
 .pricing {
     background-color: var(--light-green);
