@@ -161,7 +161,7 @@ nav a:nth-child(5) {
 }
 
 .pricing {
-    background-color: var(--light-green);
+    background-color: rgb(9, 43, 53);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -203,8 +203,127 @@ nav a:nth-child(5) {
     text-align: center;
 }
 
+form {
+    background-color: rgb(197, 233, 255);
+}
 
+.form-container {
+    padding: 2rem;
+    padding-bottom: 13rem;
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(7, minmax(40px, auto));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "name name"
+    "cweight gweight"
+    "age height"
+    "address contact"
+    "email email"
+    "message message"
+    "submit submit";
+    grid-gap: 1rem;
+}
 
+.form-container * {
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    color: rgb(78, 78, 78);
+    border: white;
+    border-radius: .5rem;
+    border-bottom: 3px solid white;
+}
+
+.form-container *:focus {
+    outline: none;
+    border-bottom: 3px solid var(--dark-green);
+
+}
+
+#message:focus {
+    border: 3px solid var(--dark-green);
+}
+
+#name {
+    grid-area: name;
+}
+
+#current-weight {
+    grid-area: cweight;
+}
+
+#goal-weight {
+    grid-area: gweight;
+}
+
+#age {
+    grid-area: age;
+}
+
+#height {
+    grid-area: height;
+}
+
+#address {
+    grid-area: address;
+}
+
+#contact-number {
+    grid-area: contact;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message {
+    border: 3px solid white;
+    grid-area: message;
+    height: 160px;
+}
+
+.button {
+    grid-area: submit;
+    color: white;
+    border: 2px solid var(--dark-green);
+}
+
+.button:hover {
+    border: 2px solid var(--dark-green);
+}
+
+.offer-section {
+    border-radius: 1rem;
+    background-color: rgb(10, 42, 68);
+    padding: 2rem 3.5rem;
+    position: relative;
+    top: -5.5rem;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-text {
+    width: 60%;
+}
+
+.offer-mainline {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.offer-limitedtime {
+    margin-top: 3rem;
+    color: rgb(110, 184, 197);
+}
+
+.gradient-button {
+    font-size: 1.8rem;
+    background-image: linear-gradient(90deg);
+}
 
 
 
@@ -287,7 +406,26 @@ nav a:nth-child(5) {
         display: block;
     }
 
+    .offer-section {
+        flex-direction: column;
+        max-width: 300px;
+    }
 
+    .offer-text {
+        width: 100%;
+    }
+
+    .offer-mainline {
+        font-size: 1.5rem;
+    }
+
+    .offer-limitedtime {
+        font-size: 0.8rem;
+    }
+
+    .buttons {
+        margin-top: 1rem;
+    }
 }
 
 
@@ -309,6 +447,30 @@ nav a:nth-child(5) {
     .gym-mainline {
         font-size: 2rem;
     }
+
+    .form-container {
+        padding: 1rem;
+        grid-template-rows: repeat(10, minmax(40px, auto));
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "name"
+        "cweight"
+        "gweight"
+        "age"
+        "height"
+        "address"
+        "contact"
+        "email"
+        "message"
+        "submit";
+        grid-gap: 1rem;
+    }
+
+    .offer-section {
+        position: static;
+        margin: 1rem auto;
+    }
+
 }
 
 
@@ -323,6 +485,10 @@ nav a:nth-child(5) {
 
     .gym-mainline {
         font-size: 1.8rem;
+    }
+
+    .offer-section {
+        padding: 1.5rem;
     }
 }
 
