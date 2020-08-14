@@ -423,8 +423,17 @@ form {
         font-size: 0.8rem;
     }
 
+    .offer-section {
+        position: static;
+        margin: 1rem auto;
+    }
+
     .buttons {
         margin-top: 1rem;
+    }
+
+    .form-container {
+        padding: 1rem;
     }
 }
 
@@ -464,11 +473,6 @@ form {
         "message"
         "submit";
         grid-gap: 1rem;
-    }
-
-    .offer-section {
-        position: static;
-        margin: 1rem auto;
     }
 
 }
